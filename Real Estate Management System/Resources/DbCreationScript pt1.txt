@@ -1,0 +1,116 @@
+USE [master]
+
+
+/****** Object:  Database [Real_Estate_Management_System]    Script Date: 5/22/2021 12:22:45 AM ******/
+CREATE DATABASE [Real_Estate_Management_System]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'Real_Estate_Management_System', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\Real_Estate_Management_System.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'Real_Estate_Management_System_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\Real_Estate_Management_System_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Real_Estate_Management_System].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ANSI_NULL_DEFAULT OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ANSI_NULLS OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ANSI_PADDING OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ANSI_WARNINGS OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ARITHABORT OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET AUTO_CLOSE OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET AUTO_SHRINK OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET AUTO_UPDATE_STATISTICS ON 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET CURSOR_CLOSE_ON_COMMIT OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET CURSOR_DEFAULT  GLOBAL 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET CONCAT_NULL_YIELDS_NULL OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET NUMERIC_ROUNDABORT OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET QUOTED_IDENTIFIER OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET RECURSIVE_TRIGGERS OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET  DISABLE_BROKER 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET DATE_CORRELATION_OPTIMIZATION OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET TRUSTWORTHY OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET PARAMETERIZATION SIMPLE 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET READ_COMMITTED_SNAPSHOT OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET HONOR_BROKER_PRIORITY OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET RECOVERY FULL 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET  MULTI_USER 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET PAGE_VERIFY CHECKSUM  
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET DB_CHAINING OFF 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET DELAYED_DURABILITY = DISABLED 
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET QUERY_STORE = OFF
+
+
+ALTER DATABASE [Real_Estate_Management_System] SET  READ_WRITE 
+
+
+

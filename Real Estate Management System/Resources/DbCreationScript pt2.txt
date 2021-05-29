@@ -1,0 +1,64 @@
+﻿USE [Real_Estate_Management_System]
+
+/****** Object:  Table [dbo].[Car]    Script Date: 5/22/2021 12:24:34 AM ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[Car](
+	[Id] [numeric](18, 0) NULL,
+	[Brand] [varchar](max) NULL,
+	[Number] [varchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+/****** Object:  Table [dbo].[Person]    Script Date: 5/22/2021 12:24:34 AM ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[Person](
+	[Id] [numeric](18, 0) NULL,
+	[FirstName] [nvarchar](max) NULL,
+	[LastName] [nvarchar](max) NULL,
+	[Age] [numeric](18, 0) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+/****** Object:  Table [dbo].[PropertyRight]    Script Date: 5/22/2021 12:24:34 AM ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[PropertyRight](
+	[Id] [numeric](18, 0) NULL,
+	[PersonId] [numeric](18, 0) NULL,
+	[RealEstateId] [numeric](18, 0) NULL,
+	[CarId] [numeric](18, 0) NULL
+) ON [PRIMARY]
+
+/****** Object:  Table [dbo].[RealEstate]    Script Date: 5/22/2021 12:24:34 AM ******/
+SET ANSI_NULLS ON
+
+SET QUOTED_IDENTIFIER ON
+
+CREATE TABLE [dbo].[RealEstate](
+	[Id] [numeric](18, 0) NULL,
+	[Address] [varchar](max) NULL,
+	[NumberOfRooms] [numeric](18, 0) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+INSERT [dbo].[Car] ([Id], [Brand], [Number]) VALUES (CAST(1 AS Numeric(18, 0)), N'Audi', N'AA-211213')
+
+INSERT [dbo].[Car] ([Id], [Brand], [Number]) VALUES (CAST(2 AS Numeric(18, 0)), N'Geely', N'AA-212241')
+
+INSERT [dbo].[Person] ([Id], [FirstName], [LastName], [Age]) VALUES (CAST(1 AS Numeric(18, 0)), N'Nikita', N'Kornienko', CAST(29 AS Numeric(18, 0)))
+
+INSERT [dbo].[Person] ([Id], [FirstName], [LastName], [Age]) VALUES (CAST(2 AS Numeric(18, 0)), N'Nina', N'Gavrulyuk', CAST(31 AS Numeric(18, 0)))
+
+INSERT [dbo].[PropertyRight] ([Id], [PersonId], [RealEstateId], [CarId]) VALUES (CAST(1 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)), CAST(1 AS Numeric(18, 0)))
+
+INSERT [dbo].[PropertyRight] ([Id], [PersonId], [RealEstateId], [CarId]) VALUES (CAST(2 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)), CAST(2 AS Numeric(18, 0)))
+
+INSERT [dbo].[RealEstate] ([Id], [Address], [NumberOfRooms]) VALUES (CAST(1 AS Numeric(18, 0)), N'Serafimovicha 15 kv. 130', CAST(2 AS Numeric(18, 0)))
+
+INSERT [dbo].[RealEstate] ([Id], [Address], [NumberOfRooms]) VALUES (CAST(2 AS Numeric(18, 0)), N'Berezniakovskaya 2 kv 41', CAST(1 AS Numeric(18, 0)))
+
